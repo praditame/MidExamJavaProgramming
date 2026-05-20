@@ -4,6 +4,7 @@ public class utsSoalF {
         Scanner a = new Scanner(System.in);
 
         int jmlPertemuan=0, total=0, persentase=0;
+        String namaMhs;
         String[] tgl;
         int[] kehadiran;
 
