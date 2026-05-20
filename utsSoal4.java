@@ -53,7 +53,6 @@ public class utsSoal4 {
 
         }
 
-        
         System.out.println("Jumlah pelanggan yang mendapat poin: "+get);    
         sc.close();
     }

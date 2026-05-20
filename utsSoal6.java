@@ -3,9 +3,10 @@ public class utsSoal6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int jmlMhs=0, rataRata=0;
+        int jmlMhs=0; 
+        double total=0.0, rataRata=0.0;
         String[] namaMhs;
-        int[] lamaBelajar;
+        double[] lamaBelajar;
 
         System.out.print("Masukkan jumlah mhs: ");
         jmlMhs = sc.nextInt();
@@ -13,7 +14,7 @@ public class utsSoal6 {
         sc.nextLine();
 
         namaMhs = new String[jmlMhs];
-        lamaBelajar = new int[jmlMhs];
+        lamaBelajar = new double[jmlMhs];
 
         for (int i = 0; i < lamaBelajar.length; i++) {
             System.out.print("Nama : ");
@@ -21,15 +22,20 @@ public class utsSoal6 {
             System.out.print("Lama belajar (jam) : ");
             lamaBelajar[i] = sc.nextInt();
 
-            rataRata += lamaBelajar[i]/jmlMhs;
+            total += lamaBelajar[i];
+            
             System.out.println();
             sc.nextLine();
         }
-            
+        
+        rataRata = total/jmlMhs;
+
+        System.out.println("Rata-rata waktu belajar mahasiswa: "+rataRata+" jam");
+
         if (rataRata >= 2 && rataRata <= 4) {
             System.out.println("Keterangan: Aktif");
         } else {
-            System.out.println("Perlu Motivasi");
+            System.out.println("Keterangan: Perlu Motivasi");
         }
         
         sc.close();
